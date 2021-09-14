@@ -4,7 +4,8 @@ localStorage arweave synchronizer
 
 ## What is globalStorage?
 
-globalStorage is a wallet centric data permanent storage.
+globalStorage is a wallet centric data storage solution for arweave applications on the permaweb.
+It is an hybrid local/on-chain storage solution made to be used the same way the native `localStorage` property works as library.
 
 ### As a (mixed) protocol
 
