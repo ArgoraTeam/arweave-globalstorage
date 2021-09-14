@@ -27,9 +27,17 @@ A global storage store app related data.
 
 ```
 {
-  timestamp: number,
+  identity: {
+    username: string,
+    links: [{ name: string, value: string }]
+  },
   apps: [
-    { name: string, storage: string }
+    {
+      _createdAt: number,
+      _updatedAt: number,
+      name: string, 
+      storage: string
+    }
   ]
 }
 ```
@@ -37,7 +45,14 @@ A global storage store app related data.
 Example:
 ```
 {
-  timestamp: 1631643589,
+  identity: {
+    username: "bidetaggle",
+    links: [
+      { name: "twitter", value: "https://twitter.com/bidetaggle" }
+      { name: "website", value: "https://bidetaggle.com/" }
+      { name: "my favorite movie", value: "https://www.youtube.com/watch?v=cTtIPBPSv0U&ab_channel=ModernWarInstitute" }
+    ],
+  },
   apps: [
     { name: "koii", storage: "{\"favorites\":[\"I8xgq3361qpR8_DvqcGpkCYAUTMktyAgvkm6kGhJzEQ\",\"WpGkJ8FoJSg1ZKHeIcP64GQXdDUeB7FzAghHMQxNY5U\"]}" },
     { name: "verto", storage: "{\"verto_theme\":\"System\",\"verto_watchlist\":[\"AR\"]}" },
