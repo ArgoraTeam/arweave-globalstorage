@@ -1,0 +1,2 @@
+# globalStorage
+localStorage arweave synchronizer 
