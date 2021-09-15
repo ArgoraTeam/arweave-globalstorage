@@ -1,6 +1,6 @@
 {
   "name": "arweave-globalstorage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hybrid local/on-chain storage solution for Arweave made to be used the same way the native localStorage property works as library.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bidetaggle/globalStorage.git"
+    "url": "git+https://github.com/bidetaggle/arweave-globalstorage.git"
   },
   "keywords": [
     "arweave",
@@ -27,9 +27,9 @@
   "author": "bidetaggle",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bidetaggle/globalStorage/issues"
+    "url": "https://github.com/bidetaggle/arweave-globalstorage/issues"
   },
-  "homepage": "https://github.com/bidetaggle/globalStorage#readme",
+  "homepage": "https://github.com/bidetaggle/arweave-globalstorage#readme",
   "devDependencies": {
     "@types/jest": "^27.0.1",
     "jest": "^27.2.0",
