@@ -141,3 +141,7 @@ __Forbidden usage: since this would reset all apps data, this function is reserv
 #### Return
 - `true`: went okay
 - `false`: went wrong
+
+# Misc.
+
+Package started from [this tutorial](https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c).

@@ -1,0 +1,36 @@
+{
+  "name": "arweave-globalstorage",
+  "version": "0.0.1",
+  "description": "Hybrid local/on-chain storage solution for Arweave made to be used the same way the native localStorage property works as library.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bidetaggle/globalStorage.git"
+  },
+  "keywords": [
+    "arweave",
+    "localStorage"
+  ],
+  "author": "bidetaggle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bidetaggle/globalStorage/issues"
+  },
+  "homepage": "https://github.com/bidetaggle/globalStorage#readme",
+  "devDependencies": {
+    "prettier": "^2.4.0",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.4.3"
+  },
+  "files": ["lib/**/*"]
+}
