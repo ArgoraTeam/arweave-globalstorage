@@ -1,10 +1,10 @@
-# globalStorage
+# arweave-globalstorage
 
 localStorage arweave synchronizer
 
-## What is globalStorage?
+## What is arweave-globalstorage?
 
-globalStorage is a wallet centric data storage solution for arweave applications on the permaweb.
+arweave-globalstorage is a wallet centric data storage solution for arweave applications on the permaweb.
 It is an hybrid local/on-chain storage solution made to be used the same way the native `localStorage` property works as library.
 
 ### As a protocol
@@ -20,7 +20,7 @@ When a __global storage__ state becomes heavy, the user can deploy a new __globa
 
 ### As a library
 
-The goal of globalStorage is to be able to keep data in the same fashion as localStorage do while having a possibility to take a "snapshot" of it on-chain. Therefore we have a way to keep user specific data accross devices.
+The goal of globalStorage is to be able to keep data in the same fashion as `localStorage` do while having a possibility to take a "snapshot" of it on-chain. Therefore we have a way to keep user specific data accross devices.
 
 # __global storage__ contract state format
 
