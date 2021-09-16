@@ -130,7 +130,7 @@ Interact with the global storage contract to override your app globalStorage con
 
 -----------
 
-## Tools provided
+## Standalone utilities
 
 `arweave-globalstorage` brings also 2 more utilities: 
 - `getGlobalStorageOfWallet`: query the last tx from the specified wallet with the tag `Protocol-Name: globalstorage`, read the __global storage__ contract stored and output a JSON object that represents the last state of the __global storage__, therefore the current __wallet's global account__.
