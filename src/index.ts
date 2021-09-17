@@ -14,7 +14,6 @@ export class GlobalStorage {
   }
 
   async activate(): Promise<string> {
-    console.log("activate");
     const jwk = await window.arweaveWallet.getActiveAddress();
     const tx = createContractFromTx(
       this.arweave,
