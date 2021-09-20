@@ -144,9 +144,30 @@ await getGlobalStorageOfWallet("aIUmY9Iy4qoW3HOikTy6aJww-mM4Y-CUJ7mXoPdzdog");
 Read a specific __wallet's global account__ state.
 
 #### Return
-- JSON object describing the state
-- `null`: Global Account not activated
-- `undefined`: Global Account was recently reset and the last deployment has not been confirmed by the network yet.
+
+- JSON object describing the state.
+```
+{
+  status: "ok",
+  result: <JSON object describing the state>
+}
+```
+
+- Global Account was recently reset and the last deployment has not been confirmed by the network yet.
+```
+{
+  status: "pending",
+  result: <JSON object describing the state>
+}
+```
+
+- Global Account not activated.
+```
+{
+  status: "error",
+  result: "Global Account not activated"
+}
+```
 
 ### [Dangerous] createGlobalStorage(): boolean
 import {createGlobalStorage} from 'arweave-globalstorage';
