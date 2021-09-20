@@ -33,7 +33,7 @@ export class GlobalStorage {
 
 export const getGlobalStorageOfWallet = async (JWK: string, arweave: Arweave) => {
   const ardb = new ArDB(arweave);
-  const tx = await ardb.search('transactions')
+  const txs = await ardb.search('transactions')
     .tag('Protocol-Name', 'globalstorage')
     .tag('Protocol-Version', '0.1')
     .from(JWK)
@@ -42,11 +42,9 @@ export const getGlobalStorageOfWallet = async (JWK: string, arweave: Arweave) =>
   let status = "ok";
   let result;
   
-  for(let i = 0 ; i < tx.length ; i++){
-    console.log(i)
+  for(const tx of txs){
     try {
-      result = await readContract(arweave, tx[i].id);
-      console.log(result);
+      result = await readContract(arweave, tx.id);
       break;
     }
     catch(e: any){
