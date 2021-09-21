@@ -2,8 +2,6 @@ import Arweave from 'arweave';
 import ArDB from '@textury/ardb';
 import { contractInitState, contractSrcTxId } from './constants';
 import {createContractFromTx, readContract} from 'smartweave';
-import { T_errorReadContract } from './types';
-import { stat } from 'fs';
 
 export class GlobalStorage {
   private AppName: string;
