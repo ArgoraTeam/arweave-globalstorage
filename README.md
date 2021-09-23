@@ -1,3 +1,5 @@
+__This is under development, do not use it yet, it's not ready__
+
 # arweave-globalstorage
 
 localStorage arweave synchronizer
@@ -55,9 +57,19 @@ Example:
     ],
   },
   apps: [
-    { name: "koii", storage: "{\"favorites\":[\"I8xgq3361qpR8_DvqcGpkCYAUTMktyAgvkm6kGhJzEQ\",\"WpGkJ8FoJSg1ZKHeIcP64GQXdDUeB7FzAghHMQxNY5U\"]}" },
-    { name: "verto", storage: "{\"verto_theme\":\"System\",\"verto_watchlist\":[\"AR\"]}" },
-    { name: "argora", storage: "{\"friends\":[\"89tR0-C1m3_sCWCoVCChg4gFYKdiH5_ZDyZpdJ2DDRw\",\"Opji45FVSmAXyW2DQ_e5T2-HkzD-Nuiu_tJ333uDy9E\"]}"
+    { 
+      name: "koii",
+      timestamp: 1632220472267,
+      storage: "{\"favorites\":[\"I8xgq3361qpR8_DvqcGpkCYAUTMktyAgvkm6kGhJzEQ\",\"WpGkJ8FoJSg1ZKHeIcP64GQXdDUeB7FzAghHMQxNY5U\"]}" },
+    { 
+      name: "verto",
+      timestamp: 1632220423123,
+      storage: "{\"verto_theme\":\"System\",\"verto_watchlist\":[\"AR\"]}" },
+    { 
+      name: "argora",
+      timestamp: 1632220471452,
+      storage: "{\"friends\":[\"89tR0-C1m3_sCWCoVCChg4gFYKdiH5_ZDyZpdJ2DDRw\",\"Opji45FVSmAXyW2DQ_e5T2-HkzD-Nuiu_tJ333uDy9E\"]}"
+    }
   ]
 }
 ```

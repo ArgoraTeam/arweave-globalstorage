@@ -2,6 +2,7 @@ import Arweave from 'arweave';
 import ArDB from '@textury/ardb';
 import { contractInitState, contractSrcTxId } from './constants';
 import {createContractFromTx, readContract} from 'smartweave';
+import { T_GlobalAccount } from './types';
 
 export class GlobalStorage {
   private AppName: string;
@@ -29,7 +30,7 @@ export class GlobalStorage {
   } 
 }
 
-export const getGlobalStorageOfWallet = async (JWK: string, arweave: Arweave) => {
+export const getGlobalStorageOfWallet = async (JWK: string, arweave: Arweave): Promise<T_GlobalAccount> => {
   const ardb = new ArDB(arweave);
   const txs = await ardb.search('transactions')
     .tag('Protocol-Name', 'globalstorage')
@@ -37,23 +38,29 @@ export const getGlobalStorageOfWallet = async (JWK: string, arweave: Arweave) =>
     .from(JWK)
     .limit(5).find();
   
-  let status = "ok";
-  let result;
+  const response: T_GlobalAccount = {
+    status: "ok",
+    description: "Global Account latest state",
+    result: null,
+  };
   
   for(const tx of txs){
     try {
-      result = await readContract(arweave, tx.id);
+      response.result = await readContract(arweave, tx.id);
       break;
     }
     catch(e: any){
-      status = "pending"
+      response.status = "pending"
+      response.description = "This user's Global Account was recently reset and its last state has not been confirmed by the network yet"
     }
   }
 
-  if(!result){
-    status = "error";
-    result = "Global Account not activated";
+  if(!response.result){
+    response.status = "error";
+    response.description = "Global Account not activated";
   }
 
-  return({ status, result });
+  return(response);
 }
+
+export * from './types';
