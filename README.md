@@ -181,18 +181,18 @@ Read a specific __wallet's global account__ state.
 }
 ```
 
-### [Dangerous] createGlobalStorage(): boolean
-import {createGlobalStorage} from 'arweave-globalstorage';
+### [Dangerous] globalStorage.activate(): boolean
+import {GlobalStorage} from 'arweave-globalstorage';
 ```
-await createGlobalStorage();
+const globalstorage = new GlobalStorage("Global-Account", arweave);
+await globalstorage.activate();
 ```
 Init or reset the connected __wallet's global account__.
 
 Reserved for the _Global Account_ app only.
 
 #### Return
-- `true`: went okay
-- `false`: went wrong
+- tx
 
 # Misc.
 
